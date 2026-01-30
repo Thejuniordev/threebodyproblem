@@ -10,22 +10,23 @@ Aqui, não basta o modelo "funcionar" — ele precisa **respeitar as leis da fí
 
 ## 🚀 Motivação
 
-Métodos clássicos como **RK4** são amplamente usados, mas:
+Este projeto nasceu da inspiração no clássico **problema dos três corpos**, que descreve o movimento de três massas sob a influência mútua da gravidade. Apesar de simples na formulação, o problema é **intrinsecamente caótico**, ou seja, pequenas diferenças nas condições iniciais levam a trajetórias completamente diferentes ao longo do tempo. Isso evidencia a necessidade de **simulações extremamente precisas e confiáveis** para estudar sistemas físicos complexos.
 
-* ❌ Não preservam invariantes físicos (energia, momento)
-* ❌ Acumulam erro exponencial em sistemas caóticos
-* ❌ Podem produzir resultados **não físicos** após certo tempo
+Métodos clássicos de integração, como **RK4 (Runge-Kutta de 4ª ordem)**, embora amplamente utilizados, apresentam limitações importantes:
 
-Por outro lado:
+* ❌ Não preservam invariantes físicos essenciais (energia, momento)
+* ❌ Erros acumulam-se exponencialmente em sistemas caóticos
+* ❌ Podem gerar resultados **não físicos** após certo tempo
 
-* 🔁 Integradores **simpléticos** (ex: Velocity Verlet) preservam a estrutura Hamiltoniana
-* 🤖 Modelos de **Machine Learning físico-informados** podem aprender o *fluxo do sistema*, não apenas a derivada
+Por outro lado, **integradores simpléticos** (ex: Velocity Verlet) preservam a estrutura Hamiltoniana do sistema, garantindo maior estabilidade e conservação de energia no longo prazo.
 
-Este projeto investiga:
+Mais recentemente, **modelos de Machine Learning físico-informados** surgiram como uma alternativa interessante: em vez de apenas aproximar derivadas, eles **aprendem a dinâmica do fluxo do sistema**, podendo capturar invariantes físicos e comportamentos complexos que métodos tradicionais podem perder.
 
-> **ML pode ser tão bom (ou melhor) que integradores clássicos na conservação de energia?**
+Portanto, o objetivo deste projeto é investigar:
 
-Spoiler: os resultados são bem interessantes.
+> **ML pode ser tão bom (ou melhor) que integradores clássicos na conservação de energia, mesmo em sistemas caóticos como o problema dos três corpos?**
+
+Spoiler: os resultados são surpreendentes e nos ajudam a compreender melhor a fusão entre **ciência, simulação e aprendizado de máquina**.
 
 ---
 
